@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="348.0" prefWidth="573.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="sk44.photorenametool.interfaces.javafx.MainWindowController">
+    <children>
+        <SplitPane dividerPositions="0.5028901734104047" focusTraversable="true" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <GridPane prefHeight="120.0" prefWidth="530.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER_RIGHT" prefWidth="168.0" text="Source Directory:" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                    <GridPane.margin>
+                                        <Insets />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label alignment="CENTER_RIGHT" prefWidth="168.0" text="Output Directory:" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <Label alignment="CENTER_RIGHT" prefWidth="168.0" text="Prefix(Optional):" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <TextField fx:id="sourceDirPath" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField fx:id="outputDirPath" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="prefix" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Button mnemonicParsing="false" onAction="#handleBrowseSourceDir" text="Browse..." GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                <Button mnemonicParsing="false" onAction="#handleBrowseOutputDir" text="Browse..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                <Label alignment="CENTER_RIGHT" prefWidth="168.0" text="Time Difference(Optional):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                <TextField fx:id="timeDifference" prefWidth="200.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="153.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="285.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="90.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <stylesheets>
+                                <URL value="@style.css" />
+                            </stylesheets>
+                        </GridPane>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="528.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#handleClear" text="Clear" />
+                                <Button mnemonicParsing="false" onAction="#handleExecute" text="Execute">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets right="26.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <TextArea fx:id="messageArea" editable="false" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</AnchorPane>
